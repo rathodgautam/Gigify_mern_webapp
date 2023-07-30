@@ -19,7 +19,7 @@ dotenv.config();
 
  
 app.use(cors({
-  origin: ['http://localhost:5173','https://gigify.onrender.com'],
+  origin: ['https://gigify.onrender.com'],
   credentials: true
 }));
 
@@ -37,6 +37,7 @@ app.use("/api/reviews", reviewRoute);
 // ___________Deployment start 
 
 const __dirname1 = path.resolve();
+//  
 console.log(path.join(__dirname1, "dist"));
 console.log(path.resolve(__dirname1,  "dist", "index.html"));
 if (process.env.NODE_ENV === "production") {
